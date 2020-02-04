@@ -1,3 +1,3 @@
-## Rust Hangman v0.1.0
+## Rust Hangman v0.1.1
 
 For Sam
