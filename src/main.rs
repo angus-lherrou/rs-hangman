@@ -1,7 +1,5 @@
 use rand::Rng;
 use std::io;
-use std::collections::HashSet;
-use std::borrow::Borrow;
 
 fn gen_hangman(wrong_ct: u32, wrong_letters: &String) -> String {
     let letter_list =
@@ -66,7 +64,7 @@ fn main() {
         let initial_matched_letters = "_".repeat(word.len());
         let mut matched_letters = initial_matched_letters.as_str();
         let mut wrong_ct = 0;
-        let mut ans: (bool, String) = (false, String::new());
+        let mut ans: (bool, String);
         let mut acc = String::new();
         while !won && wrong_ct < 6 {
             println!("{}", gen_hangman(wrong_ct, &acc));
